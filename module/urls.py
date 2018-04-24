@@ -1,9 +1,9 @@
 from django.conf.urls import url,include
-from rest_framework.routers import DefaultRouter
 from module import views
+from module.routers import CustomRouter
 
-router = DefaultRouter()
-router.register(r'Project/getAllWithOutPagination',views.ProjectViewSet)
+router = CustomRouter()
+router.register(r'Project',views.ProjectViewSet)
 router.register(r'Module',views.ModuleViewSet)
 
 
